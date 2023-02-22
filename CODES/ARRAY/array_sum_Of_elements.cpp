@@ -9,7 +9,7 @@ int sum_of_element(int arr[], int size)
     int sum = 0, i;
     for (i = 0; i < size; i++)
     {
-        sum = sum + arr[i];
+        sum += arr[i];
     }
     return sum;
 }

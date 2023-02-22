@@ -4,6 +4,7 @@ using namespace std;
 void minimum_element(int arr[], int size)
 {
     int min = INT32_MAX;
+    //int min = arr[0];
     for (int i = 0; i < size; i++)
     {
         if (arr[i] < min)
@@ -17,7 +18,7 @@ void minimum_element(int arr[], int size)
 int main()
 {
 
-    int arr[] = { 5, 88, 23, 74, 99, 12, 35, 4};
+    int arr[] = { 5, 88, 23, 74, -99, 12, 35, 4};
     int size = sizeof(arr) / sizeof(int);
 
     cout << endl;

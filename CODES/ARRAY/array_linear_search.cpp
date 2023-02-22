@@ -7,6 +7,8 @@ int search_element(int arr[], int size, int key)
     {
         if (arr[i] == key)
         {
+            cout << "Index is :" << i;
+            cout<<endl;
             return true;
         }
     }

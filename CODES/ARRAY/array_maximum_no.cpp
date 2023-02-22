@@ -4,6 +4,7 @@ using namespace std;
 void maximum_element(int arr[], int size)
 {
     int max = INT32_MIN;
+    // int max = arr[0];
     for (int i = 0; i < size; i++)
     {
         if (arr[i] > max)
