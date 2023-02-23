@@ -3,7 +3,8 @@
 #include <iostream>
 using namespace std;
 
-void unique_element(int arr[], int size)
+// 1st Method  == best for +ve & -ve values
+/*void unique_element(int arr[], int size)
 {
     for (int i = 0; i < size; i++)
     {
@@ -20,7 +21,30 @@ void unique_element(int arr[], int size)
             cout << arr[i] << " ";
         }
     }
-}
+}*/
+
+// 2nd Method == for +ve values only (MANIPULATION METHOD)
+/*void unique_element(int arr[], int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = i + 1; j < size; j++)
+        {
+            if (arr[i] == arr[j])
+            {
+                arr[i] = arr[j] = -1;
+            }
+        }
+    }
+
+    for (int i = 0; i < size; i++)
+    {
+        if (arr[i] > -1)
+        {
+            cout << arr[i] << " ";
+        }
+    }
+}*/
 
 void print_array(int arr[], int size)
 {
@@ -33,7 +57,7 @@ void print_array(int arr[], int size)
 int main()
 {
 
-    int arr[] = {1, 2, 5, 2, 7, 1, 6, 6, 8, 0, 9, 5};
+    int arr[] = {1, 2, 8, 5, 3, -4, 5, 8, 9, -4, -2, 2, -1};
     int size = sizeof(arr) / sizeof(int);
 
     cout << endl;
@@ -41,7 +65,7 @@ int main()
     cout << endl;
 
     cout << "The unique elements in the Array is :" << endl;
-    unique_element(arr, size);
+    // unique_element(arr, size);
 
     return 0;
 }
