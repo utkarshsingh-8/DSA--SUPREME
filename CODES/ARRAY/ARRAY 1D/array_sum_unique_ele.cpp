@@ -1,4 +1,4 @@
-// FIND UNIQUE ELEMENTS IN AN ARRAY
+// FIND SUM OF UNIQUE ELEMENT IN AN ARRAY
 
 #include <iostream>
 using namespace std;
@@ -11,9 +11,9 @@ void print_array(int arr[], int size)
     }
 }
 
-// 1st Method  == best for +ve & -ve values
-/*void unique_element(int arr[], int size)
+void unique_element(int arr[], int size)
 {
+    int sum = 0;
     for (int i = 0; i < size; i++)
     {
         int count = 0;
@@ -27,32 +27,12 @@ void print_array(int arr[], int size)
         if (count <= 1)
         {
             cout << arr[i] << " ";
+            sum += arr[i];
         }
     }
-}*/
-
-// 2nd Method == for +ve values only (MANIPULATION METHOD)
-/*void unique_element(int arr[], int size)
-{
-    for (int i = 0; i < size; i++)
-    {
-        for (int j = i + 1; j < size; j++)
-        {
-            if (arr[i] == arr[j])
-            {
-                arr[i] = arr[j] = -1;
-            }
-        }
-    }
-
-    for (int i = 0; i < size; i++)
-    {
-        if (arr[i] > -1)
-        {
-            cout << arr[i] << " ";
-        }
-    }
-}*/
+    cout<<endl;
+    cout << "The Sum of the unique elements is: " << sum;
+}
 
 int main()
 {

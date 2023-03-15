@@ -1,7 +1,8 @@
+// PRINT THE COUNT OF ODD AND EVEN INTEGERS PRESENT IN AN ARRAY
+
 #include <iostream>
 using namespace std;
 
-// PRINT THE COUNT OF ODD AND EVEN INTEGERS PRESENT IN AN ARRAY
 void count_odd_even(int arr[], int size)
 {
     int count = 0;
@@ -24,6 +25,7 @@ int main()
 
     cout << endl;
     count_odd_even(arr, size);
+    cout << endl;
 
     return 0;
 }

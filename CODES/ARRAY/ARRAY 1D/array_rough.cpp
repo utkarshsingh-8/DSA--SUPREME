@@ -11,10 +11,10 @@ int main()
     // int arr[5];
     // int arr[]={1,2,3};
     // int arr[8]={1,2,3,4,5};
-    // int arr[2]={1,2,3};
+    // int arr[2] = {1, 2, 3};
 
-    // cout << arr << endl; //both print address arr is work as pointer
-    // cout << &arr << endl;
+    // cout << arr << endl; // both print address arr is work as pointer
+    //  cout << &arr << endl;
 
     // int arr[5]={5,8,6,7,2};
     // cout<<"The elements of Entered are:\n";
@@ -51,16 +51,25 @@ int main()
     // }
 
     //  char ch[10];
-    //  char chh='u';
     //  memset(ch,'o',sizeof(ch));
 
     //  cout << "The elements are:\n";
-
     //  for (int i = 0; i < 10; i++)
     //  {
     //      cout <<ch[i] << " ";
     //  }
-    //  cout<<endl;
+    // cout<<endl;
+
+    // int arr[10];
+    // memset(arr, -1, sizeof(arr));
+    // // It works only with value with 0 & -1
+
+    // cout << "The elements are:\n";
+    // for (int i = 0; i < 10; i++)
+    // {
+    //     cout << arr[i] << " ";
+    // }
+    // cout << endl;
 
     // int arr[] = {1, 88, 5, 99, 4, 1};
 
@@ -94,7 +103,27 @@ int main()
     //     cout<<ele<<" ";
     // }
 
+    // int arr[] = {1, 2, 5, 9, 8};
+    // int arr1[] = {1, 'a', 8, '@'};
 
+    // int size = sizeof(arr1) / sizeof(arr1[0]);
+    // for (int i = 0; i < size; i++)
+    // {
+    //     cout << arr1[0] << " ";
+    // }
+
+    // if (2<2)
+    // {
+    //     cout<<"Hello";
+    // }
+    // else
+    // {
+    //     cout<<"World";
+    // }
+
+    // cout << "Size of void is :" << sizeof(void);
+
+    // void a=5; we cannot declare a void variable.
 
     return 0;
 }

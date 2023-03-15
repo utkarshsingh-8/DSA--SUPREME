@@ -1,49 +1,38 @@
 // FIND INTERSECTION OF TWO ARRAYS
 
-// FIND UNIQUE ELEMENT IN AN ARRAY
-
 #include <iostream>
+#include <vector>
 using namespace std;
 
-void unique_element(int arr[], int size)
+void intersection_of_array(int arr1[], int size1, int arr2[], int size2)
 {
-    for (int i = 0; i < size; i++)
+    vector<int> v;
+
+    for (int i = 0; i < size2; i++)
     {
-        int count = 0;
-        for (int j = 0; j < size; j++)
+        for (int j = 0; j < size1; j++)
         {
-            if (arr[i] == arr[j])
+            if (arr2[i] == arr1[j])
             {
-                count++;
+                v.push_back(arr2[i]);
             }
         }
-        if (count <= 1)
-        {
-            cout << arr[i] << " ";
-        }
     }
-}
-
-void print_array(int arr[], int size)
-{
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < v.size(); i++)
     {
-        cout << arr[i] << " ";
+        cout << v[i] << " ";
     }
 }
 
 int main()
 {
+    int arr1[] = {1, 8, 2, 2 - 5, 0, -11};
+    int arr2[] = {9, -7, 8, 0, 2, -11, 2};
+    int size1 = sizeof(arr1) / sizeof(arr1[0]);
+    int size2 = sizeof(arr2) / sizeof(arr2[0]);
 
-    int arr[] = {1, 2, 5, 2, 7, 1, 6, 6, 8, 0, 9, 5};
-    int size = sizeof(arr) / sizeof(int);
-
-    cout << endl;
-    print_array(arr, size);
-    cout << endl;
-
-    cout << "The unique element in the Array is :" << endl;
-    unique_element(arr, size);
+    cout << "The Intersection of two arrays is:" << endl;
+    intersection_of_array(arr1, size1, arr2, size2);
 
     return 0;
 }

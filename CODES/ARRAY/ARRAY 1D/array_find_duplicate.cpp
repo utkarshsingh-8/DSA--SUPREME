@@ -5,21 +5,21 @@ using namespace std;
 
 void duplicate_element(int arr[], int size)
 {
+    int count_duplicates = 0;
     for (int i = 0; i < size; i++)
     {
-        int count = 0;
-        for (int j = 0; j < size; j++)
+        for (int j = i + 1; j < size; j++)
         {
             if (arr[i] == arr[j])
             {
-                count++;
+                count_duplicates++;
+                cout << arr[j] << " ";
             }
         }
-        if (count >= 2)
-        {
-            cout << arr[i] << " ";
-        }
     }
+    cout << endl;
+    cout << "The Number of duplicates elements present in the array is:"
+         << count_duplicates;
 }
 
 void print_array(int arr[], int size)

@@ -12,8 +12,7 @@ void print_array(vector<int> v, int k)
     }
 }
 
-// 1ST METHOD
-/*void sort_array(vector<int> v, int size)
+void sort_array(vector<int> v, int size)
 {
     for (int i = 0; i < size; i++)
     {
@@ -25,41 +24,27 @@ void print_array(vector<int> v, int k)
             }
         }
     }
-    print_array(v,size);
-}*/
-
-// 2ND METHOD
-/*void sort_array(vector<int> v, int size)
-{
-    int start = 0, end = size - 1, i = 0;
-    vector<int> v1(size);
-
-    while (start <= end)
-    {
-        if (v[start] < v[end])
-        {
-            v1[i++] = v[start];
-            start++;
-        }
-        else
-        {
-            v1[i++] = v[end];
-            end--;
-        }
-    }
-    print_array(v1, size);
-}*/
+    print_array(v, size);
+}
 
 int main()
 {
-    vector<int> v = {88, -5, 67, -77, 30, 1, 0, 55};
+    int n;
+    cout << "Enter the size of the array:" << endl;
+    cin >> n;
+
+    vector<int> v(n);
+
+    for (int i = 0; i < n; i++)
+    {
+        cin >> v[i];
+    }
 
     cout << endl;
     cout << "The array before sorting is :" << endl;
-    int size = v.size();
-    print_array(v, size);
+    print_array(v, n);
 
     cout << endl;
     cout << "The array after sorting is" << endl;
-    //sort_array(v, size);
+    sort_array(v, n);
 }

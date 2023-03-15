@@ -6,7 +6,9 @@ using namespace std;
 
 int main()
 {
-    vector<int> v(5);
+    int n;
+    cin>>n;
+    vector<int> v(n);
 
     cout << "Enter the elements of the array:" << endl;
     for (int i = 0; i < v.size(); i++)

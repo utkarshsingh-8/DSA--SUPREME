@@ -4,7 +4,16 @@
 #include <vector>
 using namespace std;
 
-void sort_the_array(vector<int> &v, int size)
+void print_array(vector<int> v, int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        cout << v[i] << " ";
+    }
+}
+
+// 1ST METHOD (Using another vector) 🙂🙂🙂
+/*void sort_the_array(vector<int> &v, int size)
 {
     vector<int> v1(size);
 
@@ -26,12 +35,32 @@ void sort_the_array(vector<int> &v, int size)
             even_count++;
         }
     }
+    print_array(v1, size);
+}*/
 
-    for (i = 0; i < size; i++)
+// 2ND METHOD (Manipulation in the same array🙂🙂🙂
+/*void sort_the_array(vector<int> &v, int size)
+{
+    int start = 0, end = size - 1;
+    while (start <= end)
     {
-        cout << v1[i] << " ";
+        if (v[start] % 2 == 1 && v[end] % 2 == 0)
+        {
+            swap(v[start], v[end]);
+            start++;
+            end--;
+        }
+        else if (v[start] % 2 == 0)
+        {
+            start++;
+        }
+        else if (v[end] % 2 == 1)
+        {
+            end--;
+        }
     }
-}
+    print_array(v, size);
+}*/
 
 int main()
 {
@@ -45,7 +74,7 @@ int main()
     {
         cin >> v[i];
     }
-    sort_the_array(v, n);
+    //sort_the_array(v, n);
 
     return 0;
 }

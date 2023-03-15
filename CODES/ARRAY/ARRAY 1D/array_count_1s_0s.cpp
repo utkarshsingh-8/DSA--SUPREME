@@ -3,18 +3,17 @@ using namespace std;
 
 void count_element(int arr[], int size)
 {
-    int zero_count = 0, one_count = 0;
+    int zero_count = 0;
+
     for (int i = 0; i < size; i++)
     {
         if (arr[i] == 0)
         {
             zero_count++;
         }
-        if (arr[i] == 1)
-        {
-            one_count++;
-        }
     }
+
+    int one_count = size - zero_count;
     cout << zero_count << " and " << one_count;
 }
 

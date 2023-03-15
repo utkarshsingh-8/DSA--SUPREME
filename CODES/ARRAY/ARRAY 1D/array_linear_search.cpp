@@ -7,7 +7,7 @@ int search_element(int arr[], int size, int key)
     {
         if (arr[i] == key)
         {
-            cout << "Index is :" << i;
+            cout << "Present at Index: " << i;
             cout<<endl;
             return true;
         }
@@ -19,7 +19,7 @@ int main()
 {
 
     int arr[] = {1, 2, 3, 4, 5, 6};
-    int size = 6;
+    int size = sizeof(arr)/sizeof(arr[0]);
 
     int key;
     cout << endl;

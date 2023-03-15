@@ -1,40 +1,48 @@
 // SWAP ALTERNATE ELEMENT
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
-void swap_alternate_element(int arr[], int size)
+void print_array(vector<int> v)
 {
-    int start = 0, i;
-
-    for (i = 0; i < size / 2; i++)
+    for (int i = 0; i < v.size(); i++)
     {
-        swap(arr[start], arr[start + 1]);
-        start = start + 2;
+        cout << v[i] << " ";
     }
 }
 
-void print_array(int arr[], int size)
+void swap_alternate_element(vector<int> &v)
 {
-    for (int i = 0; i < size; i++)
+    int start = 0, i;
+
+    for (i = 0; i < v.size() / 2; i++)
     {
-        cout << arr[i] << " ";
+        swap(v[start], v[start + 1]);
+        start += 2;
     }
 }
 
 int main()
 {
 
-    int arr[] = {5, 23, 74, 99, 12, 25, -8, 30};
-    int size = sizeof(arr) / sizeof(int);
+    int n;
+    cout << "Enter the size of the array:" << endl;
+    cin >> n;
+
+    vector<int> v(n);
+    for (int i = 0; i < n; i++)
+    {
+        cin >> v[i];
+    }
 
     cout << endl;
-    print_array(arr, size);
+    print_array(v);
     cout << endl;
 
     cout << "The Array after the swap of the alternate element:" << endl;
-    swap_alternate_element(arr, size);
-    print_array(arr, size);
+    swap_alternate_element(v);
+    print_array(v);
 
     return 0;
 }

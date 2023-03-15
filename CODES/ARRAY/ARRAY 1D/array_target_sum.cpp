@@ -22,8 +22,16 @@ int target_sum(vector<int> v, int size, int x)
 
 int main()
 {
+    int n;
+    cout << "Enter the size of the Array:" << endl;
+    cin >> n;
+    vector<int> v(n);
 
-    vector<int> v = {3, 4, 6, 7, 1};
+    cout << "Enter the elements in the Array" << endl;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> v[i];
+    }
     int size = v.size();
 
     int x;
