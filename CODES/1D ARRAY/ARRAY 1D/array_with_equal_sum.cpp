@@ -1,4 +1,4 @@
-// PARTITION THE GIVEN ARRAY INTO TWO SUBARRAYS WITH EQUAL SUM
+// PARTITION THE GIVEN ARRAY INTO TWO SUBARRAY WITH EQUAL SUM
 
 #include <iostream>
 #include <vector>
@@ -28,7 +28,7 @@ void sub_array(vector<int> &v)
         suffix_sum = total_sum - prefix_sum;
         if (suffix_sum == prefix_sum)
         {
-            cout << "Partition the Array into two subarrays" << endl;
+            cout << "Partition the Array into two subarray" << endl;
             cout << "Index at which partition is possible is " << i << endl;
         }
     }

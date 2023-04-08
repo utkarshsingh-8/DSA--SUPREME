@@ -12,14 +12,15 @@ void print_array(vector<int> v)
     }
 }
 
-void swap_alternate_element(vector<int> &v)
+void swap_alternate_ele(vector<int> &v)
 {
-    int start = 0, i;
 
-    for (i = 0; i < v.size() / 2; i++)
+    for (int i = 0; i < v.size(); i = i + 2)
     {
-        swap(v[start], v[start + 1]);
-        start += 2;
+        if (i + 1 < v.size())
+        {
+            swap(v[i], v[i + 1]);
+        }
     }
 }
 
@@ -41,7 +42,7 @@ int main()
     cout << endl;
 
     cout << "The Array after the swap of the alternate element:" << endl;
-    swap_alternate_element(v);
+    swap_alternate_ele(v);
     print_array(v);
 
     return 0;

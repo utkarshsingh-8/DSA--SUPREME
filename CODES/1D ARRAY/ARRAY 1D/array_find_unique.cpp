@@ -65,7 +65,7 @@ int main()
     cout << endl;
 
     cout << "The unique elements in the Array is :" << endl;
-    unique_element(arr, size);
+    //unique_element(arr, size);
 
     return 0;
 }
