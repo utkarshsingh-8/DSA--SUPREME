@@ -3,7 +3,7 @@ using namespace std;
 
 void reverse_array(int arr[], int size)
 {
-    int start = 0, end = size - 1, i;
+    int start = 0, end = size - 1;
 
     while (start <= end)
     {

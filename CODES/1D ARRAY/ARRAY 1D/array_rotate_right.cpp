@@ -31,13 +31,13 @@ void print_array(vector<int> v, int size)
 }*/
 
 // 2ND METHOD
-/*void right_rotate_array(vector<int> v, int size, int k)
+void right_rotate_array(vector<int> v, int size, int k)
 {
     reverse(v.begin(), v.end());
     reverse(v.begin(), v.begin() + k);
     reverse(v.begin() + k, v.end());
     print_array(v, size);
-}*/
+}
 
 // 3RD METHOD
 /*void right_rotate_array(vector<int> &v, int n, int k)
