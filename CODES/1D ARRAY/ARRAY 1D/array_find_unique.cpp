@@ -12,7 +12,7 @@ void print_array(int arr[], int size)
 }
 
 // 1st Method  == best for +ve & -ve values
-/*void unique_element(int arr[], int size)
+void unique_element(int arr[], int size)
 {
     for (int i = 0; i < size; i++)
     {
@@ -29,7 +29,7 @@ void print_array(int arr[], int size)
             cout << arr[i] << " ";
         }
     }
-}*/
+}
 
 // 2nd Method == for +ve values only (MANIPULATION METHOD)
 /*void unique_element(int arr[], int size)
@@ -52,6 +52,8 @@ void print_array(int arr[], int size)
             cout << arr[i] << " ";
         }
     }
+
+    
 }*/
 
 int main()
@@ -65,7 +67,7 @@ int main()
     cout << endl;
 
     cout << "The unique elements in the Array is :" << endl;
-    //unique_element(arr, size);
+    unique_element(arr, size);
 
     return 0;
 }

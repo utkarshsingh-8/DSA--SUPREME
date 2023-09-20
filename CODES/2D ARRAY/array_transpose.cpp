@@ -16,7 +16,7 @@ void print(int a[3][3], int rows, int cols)
     }
 }
 
-void transpose_matrix(int a[3][3], int rows, int cols)
+/*void transpose_matrix(int a[3][3], int rows, int cols)
 {
     int temp[3][3];
     for (int i = 0; i < rows; i++)
@@ -29,7 +29,33 @@ void transpose_matrix(int a[3][3], int rows, int cols)
     }
     cout << "The Matrix after Transpose" << endl;
     print(temp, rows, cols);
-}
+}*/
+
+/*void transpose_matrix(int a[3][3], int rows, int cols)
+{
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = i + 1 ; j < cols; j++)
+        {
+            int temp = a[i][j];
+            a[i][j]=a[j][i]; //swapping the elements of two arrays
+            a[j][i]= temp;
+        }
+        cout << endl;
+    }
+    cout << "The Matrix after Transpose" << endl;
+    
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < cols; j++)
+        {
+            cout << a[i][j] << " ";
+        }
+        cout << endl;
+    }
+   
+}*/
+
 
 int main()
 {
